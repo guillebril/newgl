@@ -24,11 +24,11 @@
 </div>
 
 <ul class="nav navbar-nav hidden-xs">
-  <!-- <li>
+  <li>
     <a href="javascript:;" class="small-sidebar-toggle ripple" data-ng-click="app.layout.isSmallSidebar = !app.layout.isSmallSidebar">
       <i class="icon-toggle-sidebar"></i>
     </a>
-  </li> -->
+  </li>
   <li class="searchbox">
     <a href="javascript:;" ng-click="toggle.searchBox = !toggle.searchBox">
       <i class="icon-close" ng-if="toggle.searchBox"></i>
@@ -91,36 +91,105 @@
 
 <ul class="nav navbar-nav navbar-right hidden-xs">
 
- 
-<li>
+  <li class="uib-dropdown" uib-dropdown>
+    <a href="javascript:;" class="dropdown-toggle ripple" uib-dropdown-toggle>
+      <span class="" translate="LANGUAGE"></span>
+      <span class="caret"></span>
+    </a>
+    <ul class="uib-dropdown-menu">
+      <li>
+        <a href="javascript:;" ng-click="setLang('en_US')">English</a>
+      </li>
+      <li>
+        <a href="javascript:;" ng-click="setLang('en_RU')">Russian</a>
+      </li>
+      <li>
+        <a href="javascript:;" ng-click="setLang('en_FR')">French</a>
+      </li>
+      <li>
+        <a href="javascript:;" ng-click="setLang('en_ES')">Spanish</a>
+      </li>
+    </ul>
 
-<a href="https://community.afsworldcafe.org/" data-toggle="tooltip" data-placement="left" title="Go to AFS World Cafe">
+  </li>
 
-    <img class=" ga-head" src="/Global/images/Sprites/woca.png">
 
-</a>
-</li>
-
-<li>
-
-<a href="https://gmail.afs.org" data-toggle="tooltip" data-placement="left" title="Go to your Email">
-<img class="ga-head" src="/Global/images/Sprites/inbox.png"></a>
-</li>
-
+  <li class="dropdown" uib-dropdown>
+    <a href="javascript:;" class="dropdown-toggle ripple" uib-dropdown-toggle>
+      <i class="icon-bell"></i>
+    </a>
+    <ul class="uib-dropdown-menu notifications">
+      <li class="notifications-header">
+        <p class="text-muted small">You have 3 new messages</p>
+      </li>
+      <li>
+        <ul class="notifications-list">
+          <li>
+            <a href="javascript:;">
+              <div class="notification-icon">
+                <div class="circle-icon bg-success text-white">
+                  <i class="icon-bulb"></i>
+                </div>
+              </div>
+              <span class="notification-message"><b>Sean</b> launched a new application</span>
+              <span class="time">2s</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="notification-icon">
+                <div class="circle-icon bg-danger text-white">
+                  <i class="icon-cursor"></i>
+                </div>
+              </div>
+              <span class="notification-message"><b>Removed calendar</b> from app list</span>
+              <span class="time">4h</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="notification-icon">
+                <div class="circle-icon bg-primary text-white">
+                  <i class="icon-basket"></i>
+                </div>
+              </div>
+              <span class="notification-message"><b>Denise</b> bought <b>Urban Admin Kit</b></span>
+              <span class="time">2d</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="notification-icon">
+                <div class="circle-icon bg-info text-white">
+                  <i class="icon-bubble"></i>
+                </div>
+              </div>
+              <span class="notification-message"><b>Vincent commented</b> on an item</span>
+              <span class="time">2s</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <span class="notification-icon">
+                <img data-ng-src="images/face3.jpg" class="avatar img-circle" alt="" src="images/face3.jpg">
+              </span>
+              <span class="notification-message"><b>Jack Hunt</b> has <b>joined</b> mailing list</span>
+              <span class="time">9d</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 
   <li class="uib-dropdown" uib-dropdown>
     <a href="javascript:;" class="dropdown-toggle ripple" uib-dropdown-toggle>
       <img data-ng-src="{{user.avatar}}" class="header-avatar img-circle" alt="user" title="user">
-      <span class="m-a">
-         Raquel Martinez
+      <span class="">
+        {{user.fname}} {{user.lname}}
       </span>
-      <span> <i class="fa fa-angle-down" style="font-size: 1.3rem; "></i>
-</span>  <span style="margin-left: 10px; margin-right: 10px;"> | </span>  INT </span>
-
+      <span class="caret"></span>
     </a>
-
-   
-
     <ul class="uib-dropdown-menu">
       <li>
         <a href="javascript:;">Settings</a>
@@ -144,7 +213,9 @@
 
   </li>
 
-
-
-
- </ul>
+  <li>
+    <a href="javascript:;" class="ripple" data-ng-click="app.layout.isChatOpen = !app.layout.isChatOpen">
+      <i class="icon-user"></i>
+    </a>
+  </li>
+</ul>

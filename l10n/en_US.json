@@ -1,8 +1,7 @@
 {
   "LANGUAGE": "EN",
   "menu": {
-    "DASHBOARD": "DASHBOARD",
-    "MARKETPLACE": "MARKETPLACE",
+    "DASHBOARD": "Dashboard",
     "CUSTOMIZE": "Customize",
     "CARDS": "Cards",
     "BASIC": "Basic",

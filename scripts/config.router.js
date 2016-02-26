@@ -633,17 +633,9 @@ angular.module('app').run(['$rootScope', '$state', '$stateParams',
         data: {
           contentClasses: 'no-padding'
         }
-
-
       }).state('app.apps.social', {
         url: '/social',
         templateUrl: 'views/app-social.html'
-
-      }).state('app.apps.market', {
-        url: '/market',
-        templateUrl: 'views/app-marketplace.html'
-
-
       }).state('app.apps.projects', {
         url: '/projects',
         templateUrl: 'views/app-projects.html',
