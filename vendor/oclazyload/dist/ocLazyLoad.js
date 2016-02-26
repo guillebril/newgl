@@ -1,4 +1,4 @@
-/**
+ /**
  * oclazyload - Load modules on demand (lazy load) with angularJS
  * @version v1.0.9
  * @link https://github.com/ocombe/ocLazyLoad
